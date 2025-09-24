@@ -1,0 +1,146 @@
+:root {
+    --green__500: hsl(158, 36%, 37%);
+    --green__700: hsl(158, 42%, 18%);
+    --black: hsl(212, 21%, 14%);
+    --grey: hsl(228, 12%, 48%);
+    --cream: hsl(30, 38%, 92%);
+    --white: hsl(0, 0%, 100%);
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+/* font styles */
+p {
+  font-family: "Montserrat", Arial, sans-serif;
+  font-size: clamp(0.75rem, .65rem + 1vw, 1.3rem);
+  line-height: 1.5;
+  color: var(--grey);
+  margin-top: 1rem;
+}
+h1 {
+    font-family: "Fraunces", Times, serif;
+    color: var(--black);
+    margin-top: 1rem;
+    font-size: clamp(1.5rem, 1rem + 1vw, 4rem)
+}
+.subheading {
+    letter-spacing: .2rem;
+    text-transform: uppercase;
+    font-size: .7rem;
+}
+
+body {
+    background-color: var(--cream);
+    height: 100vh;
+    padding: 4rem 1rem;
+    display: grid;
+    place-items: center;
+}
+.card {
+    background-color: var(--white);
+    width: 100%;
+    border-radius: .5rem;
+    margin-bottom: 1rem;
+}
+.mobile__image img {
+    display: block;
+    width: 100%;
+    border-radius: .5rem .5rem 0 0;
+}
+.desktop__image img {
+    display: block;
+    width: 100%;
+    border-radius: .5rem 0 0 .5rem ;
+}
+article {
+    padding: 1.5rem;
+}
+.pricing__line {
+    margin-top: 1rem;
+}
+.price {
+    font-family: "Fraunces", Times, serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--green__500);
+}
+.strikethrough__superscript {
+    text-decoration: line-through;
+    vertical-align: super;
+    font-size: x-small;
+    padding-left: .5rem;
+    font-family: "Montserrat", sans-serif;
+    color: var(--grey)
+}
+button {
+    margin-top: 1rem;
+    width: 100%;
+    border: 0;
+    padding: 1rem;
+    border-radius: .4rem;
+    color: var(--white);
+    background-color: var(--green__500);
+    display: inline-flex;
+    justify-content: center; 
+    align-items: center;
+    gap: 0.5rem;
+
+    font-size: 0.875rem;           
+    font-weight: 500;             
+    line-height: 1; 
+}
+.button__icon {
+    width: 14px;
+    height: 14px;
+    flex-shrink: 0;
+}
+button:hover {
+    background-color: var(--green__700); 
+}
+@media screen and (min-width: 768px) {
+    .mobile__image {
+        display: none;
+    }
+    .card {
+        display: flex;
+        width: 50%;
+        max-height: 900px;
+    }
+    article {
+        width: 50%;
+        padding: 4rem;
+        margin-top: 1rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    .subheading {
+    letter-spacing: .2rem;
+    text-transform: uppercase;
+    font-size: clamp(0.75rem, .8rem + 1vw, 1.5rem)
+}
+.price {
+    font-size: 2.5rem;
+}
+.strikethrough__superscript {
+    font-size: smaller;
+}
+button {
+    padding: 1.3rem;
+
+    font-size: 1rem;           
+    font-weight: 500;             
+    line-height: 1; 
+}
+.button__icon {
+    width: 16px;
+    height: 16px;
+}
+}
+@media screen and (max-width: 768px) {
+    .desktop__image {
+        display: none;
+    }
+}
