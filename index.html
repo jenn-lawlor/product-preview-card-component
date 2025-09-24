@@ -33,12 +33,22 @@
   </head>
   <body>
     <main class="card">
-      <div class="mobile__image">
-        <img alt="perfume bottle" src="images/image-product-mobile.jpg" />
-      </div>
-      <div class="desktop__image">
-        <img alt="perfume bottle" src="images/image-product-desktop.jpg" />
-      </div>
+      <picture>
+        <!-- Desktop image, shown at 600px and wider -->
+        <source
+          class="desktop__image"
+          srcset="images/image-product-desktop.jpg"
+          media="(min-width: 600px)"
+          alt="Product image"
+        />
+
+        <!-- Mobile image, default when under 1000px -->
+        <img
+          class="mobile__image"
+          src="images/image-product-mobile.jpg"
+          alt="Product image"
+        />
+      </picture>
       <article>
         <p class="subheading">Perfume</p>
         <h1>Gabrielle Essence Eau De Parfum</h1>

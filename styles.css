@@ -14,7 +14,7 @@
 /* font styles */
 p {
   font-family: "Montserrat", Arial, sans-serif;
-  font-size: clamp(0.75rem, .65rem + 1vw, 1.3rem);
+  font-size: clamp(0.75rem, .65rem + 1vw, 1rem);
   line-height: 1.5;
   color: var(--grey);
   margin-top: 1rem;
@@ -28,31 +28,32 @@ h1 {
 .subheading {
     letter-spacing: .2rem;
     text-transform: uppercase;
-    font-size: .7rem;
+    font-size: clamp(0.7rem, .5rem + 1vw, 1rem)
 }
 
 body {
     background-color: var(--cream);
-    height: 100vh;
+    min-height: 100vh;
     padding: 4rem 1rem;
     display: grid;
     place-items: center;
 }
 .card {
     background-color: var(--white);
-    width: 100%;
+    max-width: 600px;
     border-radius: .5rem;
     margin-bottom: 1rem;
 }
-.mobile__image img {
+.mobile__image {
     display: block;
     width: 100%;
     border-radius: .5rem .5rem 0 0;
 }
-.desktop__image img {
+.desktop__image {
     display: block;
     width: 100%;
-    border-radius: .5rem 0 0 .5rem ;
+    border-radius: .5rem 0 0 .5rem;
+    object-fit: cover;
 }
 article {
     padding: 1.5rem;
@@ -99,48 +100,11 @@ button {
 button:hover {
     background-color: var(--green__700); 
 }
-@media screen and (min-width: 768px) {
-    .mobile__image {
-        display: none;
-    }
+@media screen and (min-width: 600px) {
     .card {
-        display: flex;
-        width: 50%;
-        max-height: 900px;
-    }
-    article {
-        width: 50%;
-        padding: 4rem;
-        margin-top: 1rem;
-        display: flex;
-        flex-direction: column;
-        gap: 1.5rem;
-    }
-    .subheading {
-    letter-spacing: .2rem;
-    text-transform: uppercase;
-    font-size: clamp(0.75rem, .8rem + 1vw, 1.5rem)
-}
-.price {
-    font-size: 2.5rem;
-}
-.strikethrough__superscript {
-    font-size: smaller;
-}
-button {
-    padding: 1.3rem;
-
-    font-size: 1rem;           
-    font-weight: 500;             
-    line-height: 1; 
-}
-.button__icon {
-    width: 16px;
-    height: 16px;
-}
-}
-@media screen and (max-width: 768px) {
-    .desktop__image {
-        display: none;
+        max-width: 600px;
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* Creates two equal-width columns */
+        gap: 10px;
     }
 }
