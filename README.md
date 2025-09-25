@@ -16,7 +16,7 @@ A responsive product preview card. The goal was to practice semantic HTML, CSS f
 
 ### Screenshot
 
-![Desktop Screenshot (no button hover)](https://raw.githubusercontent.com/jenn-lawlor/product-preview-card-component/main/assets/images/desktop-version.png)
+![Desktop Screenshot (no button hover)](https://raw.githubusercontent.com/jenn-lawlor/product-preview-card-component/main/images/desktop-version.png)
 
 ![Desktop Screenshot (with button hover)](https://raw.githubusercontent.com/jenn-lawlor/product-preview-card-component/main/assets/images/desktop-version-hover.png)
 
