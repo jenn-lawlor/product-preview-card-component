@@ -33,27 +33,21 @@ h1 {
 
 body {
     background-color: var(--cream);
-    min-height: 100vh;
+    min-height: 100dvh;
     padding: 4rem 1rem;
     display: grid;
     place-items: center;
 }
 .card {
     background-color: var(--white);
-    max-width: 600px;
+    max-width: 42rem;
     border-radius: .5rem;
-    margin-bottom: 1rem;
 }
-.mobile__image {
+.image {
     display: block;
     width: 100%;
     border-radius: .5rem .5rem 0 0;
-}
-.desktop__image {
-    display: block;
-    width: 100%;
-    border-radius: .5rem 0 0 .5rem;
-    object-fit: cover;
+    height: 100%;
 }
 article {
     padding: 1.5rem;
@@ -100,11 +94,18 @@ button {
 button:hover {
     background-color: var(--green__700); 
 }
-@media screen and (min-width: 600px) {
+.attribution {
+    margin-top: 1rem;
+    font-family: "Montserrat", Arial, sans-serif;
+    font-size: clamp(0.75rem, .65rem + 1vw, 1rem);
+}
+@media screen and (min-width: 42rem) {
     .card {
-        max-width: 600px;
         display: grid;
         grid-template-columns: 1fr 1fr; /* Creates two equal-width columns */
         gap: 10px;
+    }
+    .image {
+        border-radius: .5rem 0 0 .5rem;
     }
 }
