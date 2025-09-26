@@ -40,7 +40,7 @@ body {
 }
 .card {
     background-color: var(--white);
-    max-width: 42rem;
+    max-width: 41rem;
     border-radius: .5rem;
 }
 .image {
@@ -99,7 +99,11 @@ button:hover {
     font-family: "Montserrat", Arial, sans-serif;
     font-size: clamp(0.75rem, .65rem + 1vw, 1rem);
 }
-@media screen and (min-width: 42rem) {
+a {
+    color: blue;
+    font-weight: 600;
+}
+@media screen and (min-width: 41rem) {
     .card {
         display: grid;
         grid-template-columns: 1fr 1fr; /* Creates two equal-width columns */
